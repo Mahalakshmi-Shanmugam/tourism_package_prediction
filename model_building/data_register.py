@@ -1,4 +1,4 @@
- import pandas as pd
+import pandas as pd
 import osz
 
 DATA_PATH = "tourism_project/data/tourism.csv"
