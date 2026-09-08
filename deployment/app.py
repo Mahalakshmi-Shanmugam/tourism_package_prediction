@@ -7,7 +7,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from huggingface_hub import hf_hub_download
 
 # Page configuration
 st.set_page_config(
@@ -21,10 +20,7 @@ st.set_page_config(
 def load_model():
     """Load the trained model from HuggingFace Hub"""
     try:
-        model_path = hf_hub_download(
-            repo_id="maha5994/tourism-package-prediction-model",
-            filename="best_model.joblib"
-        )
+        model_path  = BASE_DIR.parent / "model_building" / "best_model.joblib"
         model = joblib.load(model_path)
         return model
     except Exception as e:
