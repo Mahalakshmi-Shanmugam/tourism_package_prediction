@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from datasets import Dataset, load_dataset
-
+HF_TOKEN = os.getenv("HF_TOKEN")
 # Load data from HuggingFace
 try:
     dataset = load_dataset("maha5994/tourism-package-prediction", split="train")
