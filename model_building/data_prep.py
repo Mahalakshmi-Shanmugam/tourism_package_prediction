@@ -98,18 +98,18 @@ print(f"Training set: {len(train_df)} samples")
 print(f"Test set: {len(test_df)} samples")
 
 # Upload train dataset
-train_dataset = Dataset.from_pandas(train_df)
-train_dataset.push_to_hub(
-    "maha5994/tourism-package-prediction-train",
-    private=False,
-    token=HF_TOKEN
-)
+#train_dataset = Dataset.from_pandas(train_df)
+#train_dataset.push_to_hub(
+ #   "maha5994/tourism-package-prediction-train",
+  #  private=False,
+  #  token=HF_TOKEN
+#)
 
 # Upload test dataset
-test_dataset = Dataset.from_pandas(test_df)
-test_dataset.push_to_hub(
-    "maha5994/tourism-package-prediction-test",
-    private=False,
-    token=HF_TOKEN
-)
-print("Processed datasets uploaded to HuggingFace!")
+#test_dataset = Dataset.from_pandas(test_df)
+#test_dataset.push_to_hub(
+ #   "maha5994/tourism-package-prediction-test",
+ #   private=False,
+ #   token=HF_TOKEN
+#)
+#print("Processed datasets uploaded to HuggingFace!")
