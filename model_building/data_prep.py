@@ -90,8 +90,8 @@ train_df.insert(0, 'CustomerID', range(300000, 300000 + len(train_df)))
 test_df.insert(0, 'CustomerID', range(400000, 400000 + len(test_df)))
 
 # Save locally
-train_df.to_csv("tourism_project/data/train_data.csv", index=False)
-test_df.to_csv("tourism_project/data/test_data.csv", index=False)
+train_df.to_csv("data/train_data.csv", index=False)
+test_df.to_csv("data/test_data.csv", index=False)
 
 print(f"Data split completed!")
 print(f"Training set: {len(train_df)} samples")
