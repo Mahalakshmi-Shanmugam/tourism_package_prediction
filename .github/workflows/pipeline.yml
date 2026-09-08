@@ -83,7 +83,7 @@ jobs:
       - name: Model Building
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python tourism_project/model_building/train.py
+        run: python model_building/train.py
 
 
   deploy-hosting:
