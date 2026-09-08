@@ -108,4 +108,4 @@ jobs:
       - name: Push files to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: nohup streamlit run deployment/app.py --server.headless true & sleep
+        run: nohup streamlit run deployment/app.py --server.headless true & sleep 10
