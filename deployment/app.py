@@ -7,7 +7,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-
+from pathlib import Path
 # Page configuration
 st.set_page_config(
     page_title="Tourism Package Prediction",
