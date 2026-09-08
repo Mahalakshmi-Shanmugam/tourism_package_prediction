@@ -20,7 +20,7 @@ st.set_page_config(
 def load_model():
     """Load the trained model from HuggingFace Hub"""
     try:
-        model_path  = BASE_DIR.parent / "model_building" / "best_model.joblib"
+        model_path  = Path(__file__).resolve().parent.parent / "model_building" / "best_model.joblib"
         model = joblib.load(model_path)
         return model
     except Exception as e:
