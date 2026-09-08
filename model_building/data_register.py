@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 DATA_PATH = "tourism_project/data/tourism.csv"
 
 EXPECTED_COLUMNS = [
