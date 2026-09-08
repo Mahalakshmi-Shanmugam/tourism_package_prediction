@@ -108,4 +108,4 @@ jobs:
       - name: Push files to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python streamlit_app.py
+        run: streamlit run deployment/app.py
