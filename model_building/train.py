@@ -19,10 +19,16 @@ import os
 mlflow.set_experiment("tourism_package_prediction")
 
 # Load train and test data from local CSVs
-X_train = pd.read_csv("Xtrain.csv")
-y_train = pd.read_csv("ytrain.csv").squeeze() # .squeeze() to convert to Series
-X_test = pd.read_csv("Xtest.csv")
-y_test = pd.read_csv("ytest.csv").squeeze() # .squeeze() to convert to Series
+# Load train/test data
+train_df = pd.read_csv("data/train_data.csv")
+test_df = pd.read_csv("data/test_data.csv")
+
+# Separate features and labels
+X_train = train_df.drop(["ProdTaken", "CustomerID"], axis=1)
+y_train = train_df["ProdTaken"]
+
+X_test = test_df.drop(["ProdTaken", "CustomerID"], axis=1)
+y_test = test_df["ProdTaken"]
 
 print(f"Training features shape: {X_train.shape}")
 print(f"Test features shape: {X_test.shape}")
